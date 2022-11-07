@@ -1,0 +1,46 @@
+
+{% extends 'vendor/base.html' %}
+{% block content %}
+<div class="page-wrapper wrapper_page" style="min-height: 250px;">
+  <!-- ============================================================== -->
+  <!-- Bread crumb and right sidebar toggle -->
+  <!-- ============================================================== -->
+<div class="container-fluid white_bg">
+   <div class="row">
+<form action="" class="right_area responsive_area" method="POST">
+  {% csrf_token %}
+ 
+  <p>Manage Business </p>
+  <div class="resgistration-input-box-area box_area">
+     <input type="text" id="fname" name="business_name" class="form-control input_area" placeholder="business_name">
+    </div>
+    <div class="resgistration-input-box-area box_area">
+     <input type="text" id="fname" name="business_email_id" class="form-control input_area" placeholder="business_email_id">
+    </div>
+    <div class="resgistration-input-box-area box_area">
+      <input type="text" id="fname" name="business_phoneno" class="form-control input_area" placeholder="business_phoneno">
+     </div>
+  
+    <div class="resgistration-input-box-area box_area">
+     <input type="text" id="fname" name="business_paidtotal_earning" class="form-control input_area" placeholder="business_paidtotal_earning">
+    </div>
+    <div class="resgistration-input-box-area box_area">
+     <input type="tel" id="fname" name="business_unpaidtotal_earning" class="form-control input_area" placeholder="business_unpaidtotal_earning">
+    </div>
+    <div class="resgistration-input-box-area box_area">
+     <input type="text" id="fname" name="unpaid_paid_referals" class="form-control input_area" placeholder="unpaid_paid_referals">
+    </div>
+    <div class="resgistration-input-box-area box_area">
+      <input type="text" id="fname" name="paid_total_referals" class="form-control input_area" placeholder="paid_total_referals">
+     </div>
+ 
+    <div class="email-submit-btn-area btn_area">
+     <button type="submit" class="email-submit-btn btn_submit">Submit</button>   
+  </div>
+  
+</form>
+
+</div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,280 @@
+{% extends 'affiliator/base.html' %}
+{% block content %}
+{% load static %}
+<div class="page-wrapper wrapper_page" style="min-height: 250px;">
+  <!-- ============================================================== -->
+  <!-- Bread crumb and right sidebar toggle -->
+  <!-- ============================================================== -->
+  <div class="container-fluid fluid_container responsive_container pt-3 white_bg">
+    <div class="row responsive_row">
+      <div class="col-lg-12">
+        <div class="application-detail-heading-area">
+          <h2 class="noti_detail">Settings</h2>
+        </div>
+
+        <!-- <div class="send-notifications-btn-area">
+         <a href="#" class="send-notifications-btn">Send Notification</a>   
+        </div> -->
+
+      </div>
+      <div class="col-lg-12">
+        <div class="setting-tab-detail-main-area main_area_tab_setting">
+          <div class="setting-tab-main-area tab_setting_main_area">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active tab-btn link_nav" id="manage-profile-tab" data-bs-toggle="tab"
+                  data-bs-target="#manage-profile" type="button" role="tab" aria-controls="manage-profile"
+                  aria-selected="false"><i class="fa fa-user" aria-hidden="true">
+                  </i><span class="responsive_icon">Manage Profile</span></button>
+              </li>
+              <li class="sidebar-item">
+                <a class="btn-btn-primary" href="{%  url 'ChangePassword'  %}" aria-expanded="false">
+                  <i class="fas fa-users leftside_icon"></i>
+                  <span class="hide-menu">Change Password </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="manage-profile" role="tabpanel"
+              aria-labelledby="manage-profile-tab">
+              <div class="row">
+                <div class="col-lg-5">
+                  <div class="setting-tab-heading-area">
+                    <h2>Personal Info</h2>
+                  </div>
+                  <!-- <div class="add-payment-heading-area">
+                <h2>Photo</h2> 
+            </div> -->
+
+                  <div class="setting-profile-detail-main-area responsive_width">
+                    <div class="user-photo-main-area">
+                      <div class="user-img-area">
+
+                      </div>
+                      <div class="change-photo-btn-area">
+                        <label for="edit" class="change-poto-btn edit_btn">
+
+                        </label>
+
+                      </div>
+                      {% if request.user.choose_profilepic %}
+                      <img src="{{ request.user.choose_profilepic.url }}" alt="user img">
+                      {% endif %}
+
+                    </div>
+
+
+                    <div class="user-detail-main-area">
+                      <div class="row space_left">
+                        <div class="col-lg-6 col_lg_six">
+                          <div class="personal-information-heading">
+                            <h2>Full Name</h2>
+                            <h2>Email ID</h2>
+                            <h2>Phone</h2>
+                            <h2>Gender</h2>
+                            <h2>Country</h2>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col_lg_six">
+                          <div class="personal-information-details">
+                            <p>{{request.user.first_name}} {{request.user.last_name}}</p>
+                            <p>{{request.user.email_id}}</p>
+                            <p>{{request.user.phone_number}}</p>
+
+                            <p>{{request.user.gender}}</p>
+                            <p>{{request.user.Country}}</p>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-7">
+                  <div class="setting-tab-heading-area">
+                    <h2>Personal Details</h2>
+                  </div>
+                  <div class="setting-profile-detail-input-area">
+                    <form class="contact-form-main-area" action="" method="post" id="paymentFrm">
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control field change_border" name="first_name"
+                              value="{{request.user.first_name}}" placeholder="Enter First Name" autofocus=""
+                              required="" id="name">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control field change_border" name="last_name"
+                              value="{{request.user.last_name}}" placeholder="Enter Last Name" autofocus="" required=""
+                              id="name">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Email ID</label>
+                            <input type="email" class="form-control field change_border" name="email_id"
+                              value="{{request.user.email_id}}" placeholder="Enter Email ID" autofocus="" required=""
+                              id="name">
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Contact Number</label>
+                            <input type="tel" class="form-control field change_border" name="phone_number"
+                              value="{{request.user.phone_number}}" placeholder="Enter Contact Number" autofocus=""
+                              required="" id="name">
+                          </div>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Gender</label>
+                            <input type="text" class="form-control field change_border" name="gender"
+                              value="{{request.user.gender}}" placeholder="Enter Gender" autofocus="" required=""
+                              id="name">
+                          </div>
+                        </div>
+
+
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Address</label>
+                            <input type="text" class="form-control field change_border" name="address"
+                              value="{{request.user.address}}" placeholder="Enter Address" autofocus="" required=""
+                              id="name">
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Country</label>
+                            <input type="text" class="form-control field change_border" name="Country"
+                              value="{{request.user.Country}}" placeholder="Enter Country" autofocus="" required=""
+                              id="name">
+                          </div>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>State</label>
+                            <input type="text" class="form-control field change_border" name="state"
+                              value="{{request.user.state}}" placeholder="State" autofocus="" required="" id="name">
+                          </div>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>City</label>
+                            <input type="text" class="form-control field change_border" name="city"
+                              value="{{request.user.city}}" placeholder="City" autofocus="" required="" id="name">
+                          </div>
+                        </div>
+
+
+
+
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <label>Postal/ZIP Code</label>
+                            <input type="text" class="form-control field change_border" name="Postal_zipcode"
+                              value="{{request.user.Postal_zipcode}}" placeholder="Enter Postal/ZIP Code" autofocus=""
+                              required="" id="name">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="contact-form-submint-btn-area">
+                            <input type="file" class="form-control field change_border" alt="img" width="48" height="48"
+                              name="choose_profilepic" placeholder="choose_profilepic" autofocus="" required=""
+                              id="name">
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="contact-form-submint-btn-area">
+                            <button type="submit" class="contact-form-submint-btn btn_submit">Submit</button>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="change-password" role="tabpanel" aria-labelledby="change-password-tab">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="setting-tab-heading-area">
+                    <h2>Change Password</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="change-password-input-box-area">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="change-password-lavel-area">
+                      <h2>Old Password</h2>
+                    </div>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="change-password-input-box">
+                      <input type="password" id="fname" name="fname" class="form-control change_border"
+                        placeholder="Enter Old Password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="change-password-input-box-area">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="change-password-lavel-area">
+                      <h2>New Password</h2>
+                    </div>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="change-password-input-box">
+                      <input type="password" id="fname" name="fname" class="form-control change_border"
+                        placeholder="Enter New Password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="change-password-input-box-area">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="change-password-lavel-area">
+                      <h2>Confirm Password</h2>
+                    </div>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="change-password-input-box">
+                      <input type="password" id="fname" name="fname" class="form-control change_border"
+                        placeholder="Enter Confirm Password">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="change-password-submit-area">
+                <button type="submit" class="submit-password-change-btn btn_submit">Submit</button>
+              </div>
+            </div>
+            <!-- <div class="tab-pane fade" id="purchase-plan" role="tabpanel" aria-labelledby="purchase-plan-tab">
+         <p>3</p>
+        </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}

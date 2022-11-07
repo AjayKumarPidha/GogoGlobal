@@ -1,0 +1,73 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+<!--  this is a home page banner views-->
+
+{%  block content %}
+<div class="page-wrapper wrapper_page" style="min-height: 250px;">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+  <div class="container-fluid fluid_container responsive_container pt-3 white_bg">
+     <div class="row">
+      <div class="col-lg-7">
+         <div class="application-detail-heading-area">
+         <h2 class="noti_detail">Add New</h2> 
+        </div>
+       <div class="contact-detail-main-area main_area_contact_detail">
+        <div class="row">
+         <div class="col-lg-12">
+          <!--<div class="contact-heading-area">
+           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          </div>-->
+          <form class="contact-form-main-area"  method="POST" id="paymentFrm">
+              {% csrf_token %}
+           <div class="row"> 
+           
+            <div class="col-lg-12">
+             <div class="form-group">
+              <label>Add Headings</label>
+              <input type="text" class="form-control field change_border" name="heading" placeholder="Enter Headings" autofocus="" required="" id="heading">
+             </div> 
+            </div>
+            <div class="col-lg-12">
+             <div class="form-group">
+              <label>Add Description</label>
+              <textarea class="form-control change_border" placeholder="Enter Description" name="descriptions" ></textarea>
+             </div> 
+            </div>
+            <div class="col-lg-12">
+             <div class="contact-form-submint-btn-area">
+              <button class="contact-form-submint-btn btn_submit">Submit</button> 
+             </div>   
+            </div>
+           </div>
+           </form>
+         </div>   
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-5"> 
+        <div class="application-detail-heading-area">
+          <h2 class="noti_detail">Manage Terms Conditions</h2> 
+         </div> 
+        <div class="contact-detail-text-main-area  main_area_contact_detail">
+         <div class="row">
+          <div class="col-lg-12"> 
+           <div class="contact-address-card-area">
+             <div class="contact-address-map-marker map_marker">   
+           
+             </div> 
+             <div class="contact-address-emial-area"> 
+              <h4>Show All Details</h4>
+              <a href="{%  url 'DetailstermsConditions' %}">Edit/Delete</a>
+             </div>
+           </div>
+              
+          </div>
+         </div>
+        </div> 
+       </div>  
+
+</div>
+
+{% endblock %}

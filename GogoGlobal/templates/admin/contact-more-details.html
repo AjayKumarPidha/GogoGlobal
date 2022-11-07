@@ -1,0 +1,66 @@
+
+{% extends 'admin/base.html' %}
+{% load static %}
+
+
+{%  block content %}
+<div class="page-wrapper white_bg" style="min-height: 250px;">
+
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid fluid_container pt-3">
+     <div class="row responsive_row">
+        <div class="application-detail-heading-area">
+         <h2 class="noti_detail">Contact User Details</h2> 
+        </div>
+      <div class="col-lg-5 lg_col">
+      <!--  <div class="application-detail-heading-area">
+         <h2 class="info_personal">Personal Info</h2>
+       </div> -->
+       <!-- <div class="add-payment-heading-area">
+        <h2>Photo</h2> 
+       </div> -->
+       <div class="profile-detail-main-area main_area_profile_detail responsive_width">
+       
+
+       <div class="user-detail-main-area">
+        <div class="row space_left">
+         <div class="col-lg-6 col_lg_six">
+          <div class="personal-information-heading">
+           <h2>First Name</h2> 
+           <h2>Last Name</h2> 
+
+           <h2>Email ID</h2>
+           <h2>Phone</h2>
+           <h2>Subject</h2>
+           <h2>Message</h2>
+          </div>  
+         </div>
+         <div class="col-lg-6 col_lg_six">
+          <div class="personal-information-details">
+           <p>{{data.first_name}}</p> 
+           <p>{{data.last_name}}</p> 
+
+           <p>{{data.email_id}}</p>
+           <p>{{data.phone_number}}</p>
+           <p>{{data.subject}}</p>
+           <p>{{data.message}}</p>
+          </div>  
+         </div>      
+        </div>
+       </div>
+       
+       </div>
+       <div class="col-lg-7">
+        
+        <a  href="{% url 'conatctinquiryDelete' data.id %}" class="email-submit-btn btn_submit"  onclick="return confirm('Are You Sure')">Delete</a> 
+      </div>
+      </div>
+      
+     </div>
+    </div>
+    
+</div>
+
+{% endblock content %}

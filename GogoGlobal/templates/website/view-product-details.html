@@ -1,0 +1,311 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+	.copy-link {
+		--height: 36px;
+
+		display: flex;
+		max-width: 250px;
+	}
+
+	.copy-link-input {
+		flex-grow: 1;
+		padding: 0 8px;
+		font-size: 14px;
+		border: 1px solid #cccccc;
+		border-right: none;
+		outline: none;
+	}
+
+	.copy-link-input:hover {
+		background: #eeeeee;
+	}
+
+	.copy-link-button {
+		flex-shrink: 0;
+		width: var(--height);
+		height: var(--height);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #dddddd;
+		color: #333333;
+		outline: none;
+		border: 1px solid #cccccc;
+		cursor: pointer;
+	}
+
+	.copy-link-button:hover {
+		background: #cccccc;
+	}
+</style>
+<div class="product-area section pt-5">
+	<div class="container">
+		<!-- 			<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h2>Our Product Items</h2>
+				</div>
+			</div>
+		</div> -->
+		<div class="row">
+			<div class="col-12">
+				<div class="product-info">
+					<!-- <div class="nav-main">
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+								<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#man" role="tab">Man</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women" role="tab">Woman</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accessories" role="tab">Accessories</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#essential" role="tab">Essential</a></li>
+								<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#prices" role="tab">Prices</a></li>
+							</ul>
+						</div> -->
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="man" role="tabpanel">
+							<section class="productDetailSection">
+								<div class="container">
+									<div class="card">
+										<div class="container-fliud">
+											<div class="wrapper row">
+												<div class="preview col-md-6">
+
+													<div class="preview-pic tab-content">
+														<div class="tab-pane active" id="pic-1">
+															<img src="{{product.product_image.url}}"
+																class="gogolife-image"
+																src="{{product.product_image.url}}"
+																style="width: 100%; height: 500px;" />
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="details col-md-6">
+
+													<div class="rightShareProduct ">
+														<h3 class="product-title" text="{{product.product_name}}"></h3>
+														<div class="action">
+
+															<button class="add-to-cart shareClick"
+																type="button">Share</button>
+															{% if user.is_authenticated %}
+															<ul class="share-btn-container shareProduct socialshare"
+																if="{{request.user.email_id}}">
+
+																<li><a target="_blank"
+																		href="mailto:?subject=I wanted you to see this site {{product.product_name}}  {{product.product_image.url}} &amp;body=Check out this site http://www.website.com."
+																		href="@{'mailto:?subject='+ {{product.product_link}}'&amp;body=Check out this site '+link+'/ref_'+{{request.user.affiliate_id}}"
+																		onclick="shareLink()"
+																		title="Share by Email"><span><i
+																				class="fa fa-envelope"></i></span><span>Email</span></a>
+																</li>
+																<li><a href="#" target="_blank"
+																		title="Share by facebook"
+																		th:href="@{'https://www.facebook.com/sharer/sharer.php?u='+${link+'/ref_'+session.affiliatid} + '&amp; src=sdkpreparse'}"
+																		th:onclick="shareLink([[${id}]])">
+																		<span><i
+																				class="fab fa-facebook fb-xfbml-parse-ignore"></i></span><span>facebook</span>
+																	</a></li>
+																<li><a href="#" title="Share by Whatsapp"
+																		target="_blank"
+																		href="@{'https://wa.me/?text='+ ${productname} +': '+ ${link+'/ref_'+session.affiliatid}}"
+																		th:onclick="shareLink([[${id}]])">
+																		<span><i
+																				class="fab fa-whatsapp"></i></span><span>Whatsapp</span>
+																	</a></li>
+																<li>
+
+																	<div class="copy-link">
+
+																		<button type="button" class="copy-link-button">
+																			<span class="material-icons">Copy
+																				Link</span>
+																		</button>
+																		<input type="text" class="copy-link-input"
+																			value="{{product.product_link}}" readonly>
+																	</div>
+																</li>
+
+
+
+
+															</ul>
+															{% else %}
+																<!-- else condition is displaying -->
+															<ul class="share-btn-container shareProduct socialshare"
+																unless="{{request.user.email_id}}">
+																
+																<div class="copy-link">
+
+																	<button type="button" class="copy-link-button">
+																		<span class="material-icons">Copy
+																			Link</span>
+																	</button>
+																	<input type="text" class="copy-link-input"
+																		value="{{product.product_link}}" readonly>
+																</div>	
+															</ul> 
+															{% endif %}
+
+															<!-- share buttons end section -->
+														</div>
+													</div>
+													<div class="rating"></div>
+													<h4 class="price">
+														price: <span>$ </span><span
+															text="{{product.product_price}}">{{product.product_price}}</span>
+													</h4>
+													<p class="product-description"
+														text="{{product.product_description}}">
+														{{product.product_description}}</p>
+
+
+
+												</div>
+
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</section>
+
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="vid" value="{{vid}}" />
+</div>
+<script>
+	document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+		const inputField = copyLinkParent.querySelector(".copy-link-input");
+		const copyButton = copyLinkParent.querySelector(".copy-link-button");
+		const text = inputField.value;
+
+		inputField.addEventListener("focus", () => inputField.select());
+		// console.log(copyButton, 'button')
+		copyButton.addEventListener("click", () => {
+			inputField.select();
+			document.execCommand('copy');
+			// inputField.parentNode.removeChild(inputField);
+			// navigator.clipboard.writeText(text);
+			inputField.value = "Copied!";
+
+			// setTimeout(() => (inputField.value = text), 2000);
+		});
+	});
+
+</script>
+
+
+<!-- 	<script src="js/jquery-ui.min.js"
+		th:src="@{/mylibraries/js/webjs/jquery-ui.min.js}"></script>
+		
+	<script src="js/bootstrap.min.js"
+		th:src="@{/mylibraries/js/webjs/bootstrap.min.js}"></script>
+		
+	<script src="js/slicknav.min.js"
+		th:src="@{/mylibraries/js/webjs/slicknav.min.js}"></script>
+		
+	<script src="js/owl-carousel.js"
+		th:src="@{/mylibraries/js/webjs/owl-carousel.js}"></script>
+		
+	<script src="js/nicesellect.js"
+		th:src="@{/mylibraries/js/webjs/nicesellect.js}"></script>
+		
+	<script src="js/easing.js" th:src="@{/mylibraries/js/webjs/easing.js}"></script>
+	
+	<script src="js/active.js" th:src="@{/mylibraries/js/webjs/active.js}"></script> -->
+
+
+
+<script>
+
+	$(document).ready(function () {
+		$(".shareClick").click(function () {
+			console.log("Ankur")
+
+			$(".shareProduct").toggle()
+		});
+
+	});
+</script>
+
+<script>
+	function myFunction(e) {
+		// var copyText = "{{product.product_link}}";
+		var copyText = "Abnmiur";
+
+		alert(copyText);
+		navigator.clipboard.writeText(copyText);
+		document.getElementById(id).innerHTML = "Link copied!";
+		alert(copyText);
+	}
+
+	function shareLink(id) {
+		var product_url = "{{product.product_link}}"
+		console.log("product url", product_url)
+		var product_name = "{{product.product_name}}"
+		console.log(product_name)
+
+		var product_serialNo = "{{product.serial_number}}"
+		console.log("product serial number", product_serial)
+		var product_image = "{{product.product_image.url}}"
+		console.log("product image url", product_image)
+		var product_ref_link = "{{product.product_link}}'ref-'+{{request.user.affiliate_id}}"
+		console.log("ref link", product_ref_link)
+		var product_price = "{{product.product_price}}"
+		console.log("product price")
+
+
+
+		$.ajax({
+			type: 'POST',
+			url: 'addShaereProduct',
+			data: {
+				product_url: product_url,
+			},
+			success: function (data) {
+			}
+		});
+	}
+		/* function whatsappFunc(id){
+var copyText = document.getElementById(id);
+console.log(copyText.value);
+var link= copyText.value;
+$.ajax({
+type : 'POST',
+url : '/customer/sendbywhatsapp',
+data : {
+id : id
+},
+success : function(data) {
+}
+});
+}
+function emailFunc(id){
+var copyText = document.getElementById(id);
+console.log(copyText.value);
+var link= copyText.value;
+$.ajax({
+type : 'POST',
+url : '/customer/sendbyemail',
+data : {
+id : id
+},
+success : function(data) {
+}
+});
+} */
+</script>
+{% endblock %}

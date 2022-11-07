@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>gogoGlobal</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Custom CSS -->
+   <link href="../business panel/css/style.min.css" rel="stylesheet">
+   <link href="./css/responsive.css" rel="stylesheet">
+   <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body style="font-family: Roboto, sans-serif;">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar top_header responsive_head" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin6">
+                    <!-- Logo -->
+                    <a class="navbar-brand navbar_logo" href="dashboard.html">
+                        <span class="logo-icon icon_logo">
+                            <img src="images/logopng.png" alt="logo-img"> 
+                        </span>
+                    </a>
+                    <!-- toggle and nav items -->
+                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                        href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                </div>
+                <i class='fas fa-bars' style='color: #4691ce; font-size: 22px; margin-left: 10px;'></i>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse collapse_navbar" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                                href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <li class=" in">
+                            <form role="search" class="app-search d-none d-md-block me-3">
+                                <input type="text" placeholder="Search..." class="form-control mt-0 border_color">
+                                <a href="" class="active">
+                                    <i class="fa fa-search" style="color: #4691ce;"></i>
+                                </a>
+                            </form>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a class="profile-pic" href="profile-details.html" class="dropdown-toggle" data-bs-toggle="dropdown">
+                                <img src="plugins/images/users/varun.jpg" alt="user-img" width="36"
+                                    class="img-circle"><span class="text-white font-medium">Steave <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                            </a>
+                            <ul class="dropdown-menu profileDropdown">
+                              <li><a class="dropdown-item" href="profile-details.html">Profile</a></li>
+                              <li><a class="dropdown-item" href="settings.html">Setting</a></li>
+                              <li><a class="dropdown-item" href="login.html">Log Out</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="notification_bell">
+                            <a href="#" class="color_white"><i class="fas fa-bell"></i></a>
+                            <span class="noti_number">5</span>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+         <aside class="left-sidebar left_aside" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="nav_bar_side">
+                        <!-- User Profile-->
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./business-panel-dashboard.html"
+                                aria-expanded="false">
+                                <i class="fas fa-tachometer-alt leftside_icon"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./my-affiliate.html"
+                                aria-expanded="false">
+                                <i class="fas fa-user-plus leftside_icon"></i>
+                                <span class="hide-menu">My Affiliate</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./payment.html"
+                                aria-expanded="false">
+                                <i class="fas fa-users leftside_icon"></i>
+                                <span class="hide-menu">Total Sale</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./setting.html"
+                                aria-expanded="false">
+                                <i class="fas fa-cog leftside_icon"></i>
+                                <span class="hide-menu">Settings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./notification.html"
+                                aria-expanded="false">
+                                <i class="fas fa-bell leftside_icon"></i>
+                                <span class="hide-menu">Notifications</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./contact-us.html"
+                                aria-expanded="false">
+                                <i class="fas fa-address-card leftside_icon"></i>
+                                <span class="hide-menu">Contact Us</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./term-condition.html"
+                                aria-expanded="false">
+                                <i class="fas fa-certificate leftside_icon" aria-hidden="true"></i>
+                                <span class="hide-menu">Terms & Conditions</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./privacy-policy.html"
+                                aria-expanded="false">
+                                <i class="fas fa-file-alt leftside_icon"></i>
+                                <span class="hide-menu">Privacy & Policy</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link link_sidebar" href="./login.html"
+                                aria-expanded="false">
+                                <i class="fas fa-power-off leftside_icon"></i>
+                                <span class="hide-menu">Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigtion -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper wrapper_page" style="min-height: 250px;">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+          <div class="container-fluid fluid_container responsive_container pt-3 white_bg">
+             <div class="row responsive_row">
+              <div class="col-lg-12">
+               <div class="application-detail-heading-area">
+                 <h2 class="noti_detail">Total Sale</h2> 
+                </div>
+              </div>
+              <div class="col-lg-12">
+               <div class="setting-tab-detail-main-area main_area_tab_setting">
+               <div class="setting-tab-main-area tab_setting_main_area">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                 <li class="nav-item" role="presentation">
+                    <button class="nav-link active tab-btn link_nav" id="manage-profile-tab" data-bs-toggle="tab" data-bs-target="#manage-profile" type="button" role="tab" aria-controls="manage-profile" aria-selected="false"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i><span class="responsive_icon">Total Earn</span></button>
+                 </li>   
+                 <li class="nav-item" role="presentation">
+                  <button class="nav-link tab-btn link_nav" id="change-password-tab" data-bs-toggle="tab" data-bs-target="#change-password" type="button" role="tab" aria-controls="change-password" aria-selected="true"><i class="fa-regular fa-hand-holding-dollar"></i><span class="responsive_icon">Rewards wallet</span></button>
+                 </li>
+                 <li class="nav-item" role="presentation">
+                    <button class="nav-link tab-btn link_nav" id="purchase-plan-tab" data-bs-toggle="tab" data-bs-target="#purchase-plan" type="button" role="tab" aria-controls="purchase-plan" aria-selected="false"><span class="responsive_icon">Withdraw rewards</span></button>
+                 </li>
+                 
+                </ul>
+               </div>
+               <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="manage-profile" role="tabpanel" aria-labelledby="manage-profile-tab">   
+                 <div class="row">
+                    <div class="setting-tab-heading-area">
+                        <h2>Total Sale</h2>
+                       </div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Discription</th>
+                            <th scope="col">Serial #</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Unit Cost</th>
+                            <th scope="col">Commission</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>iPhone</td>
+                            <td>952426581</td>
+                            <td>2</td>
+                            <td>$700.00	</td>
+                            <td>$100</td>
+                            <td>$1400.00</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>iMac</td>
+                            <td>457584298</td>
+                            <td>1</td>
+                            <td>$1000.00</td>
+                            <td>$100</td>
+                            <td>$1000.00</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Apple Tv</td>
+                            <td>98545758</td>
+                            <td>2</td>
+                            <td>$550.00	</td>
+                            <td>$100</td>
+                            <td>$1100.00</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>McBook</td>
+                            <td>98545758</td>
+                            <td>2</td>
+                            <td>$550.00	</td>
+                            <td>$100</td>
+                            <td>$1100.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="row">
+                        <div class="col-12 text-right">
+                            <p class="lead"><b>Payment Due</b><span class="text-danger"> 14/08/2018 </span></p>
+                
+                            <div>
+                                <p>Sub - Total amount  :  $7,200.00</p>
+                                <p>Tax (18%)  :  $1296.00</p>
+                                <p>Shipping  :  $100.00</p>
+                            </div>
+                            <div class="total-payment">
+                                <h3><b>Total :</b> $8,596.00</h3>
+                            </div>
+                
+                        </div>
+                        <!-- /.col -->
+                      </div>
+             </div> 
+            </div>
+                <div class="tab-pane fade" id="change-password" role="tabpanel" aria-labelledby="change-password-tab"> 
+                <div class="row">
+                  <div class="col-lg-12">
+                   <div class="setting-tab-heading-area">
+                    <h2>Rewards wallet</h2>
+                   </div> 
+                  </div>    
+                 </div>  
+                 <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Avilable to Withdraw</th>
+                        <th scope="col">Total Earn</th>
+                        <th scope="col">Total Withdraw</th>
+                        
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>$500.00</td>
+                        <td style="width: 140px; color: rgb(20, 133, 100);">+$2500.00</td>
+                        <td style="width: 140px; color: rgb(219, 84, 42);">-$2000.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="row">
+                    <div class="col-lg-12">
+                     <div class="setting-tab-heading-area">
+                      <h2>Transaction</h2>
+                     </div> 
+                    </div>    
+                   </div> 
+                   <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Discription</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Referal Credit</td>
+                        <td>03 Dec 2021 07:30 PM</td>
+                        <td>Complete</td>
+                        <td style="color: rgb(20, 133, 100);">+$1000</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Reward Withdraw</td>
+                        <td>25 Nov 2021 07:57 PM</td>
+                        <td>Complete</td>
+                        <td style="color: rgb(219, 84, 42);">-$500</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Referal Credit</td>
+                        <td>25 Nov 2021 07:25 PM</td>
+                        <td>Complete</td>
+                        <td style="color: rgb(20, 133, 100);">+$500</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Reward Withdraw</td>
+                        <td>23 Nov 2021 12:57 PM</td>
+                        <td>Complete</td>
+                        <td style="color: rgb(219, 84, 42);">-$500</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="purchase-plan" role="tabpanel" aria-labelledby="purchase-plan-tab"> 
+                  <div class="row">
+                    <div class="col-lg-12">
+                     <div class="setting-tab-heading-area">
+                      <h2>Securities wallet</h2>
+                     </div> 
+                    </div>    
+                   </div>  
+                   <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Avilable to Withdraw</th>
+                          <th scope="col">Total Earn</th>
+                          <th scope="col">Total Withdraw</th>
+                          
+                      </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>$500.00</td>
+                          <td style="width: 140px; color: rgb(20, 133, 100);">+$2500.00</td>
+                          <td style="width: 140px; color: rgb(219, 84, 42);">-$2000.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="row withdraw_fund">
+                      <div class="col">
+                        <div class="fund">
+                          <span>How Much Would You Like To Withdraw</span>
+                        </div>
+                        <form action="">
+                          <input type="text" placeholder="$ 200.00" class="input">
+                          <div>
+                            <button type="button" class="continue">continue</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                       <div class="setting-tab-heading-area">
+                        <h2>Transaction</h2>
+                       </div> 
+                      </div>    
+                     </div> 
+                     <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Discription</th>
+                          <th scope="col">Requested On</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Withdraw funds via QUARTERLY_WITHDRAWAL</td>
+                          <td>03 Dec 2021</td>
+                          <td>Complete</td>
+                          <td style="color: rgb(20, 133, 100);">+$1000</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Deposited to BANK OF SPAIN • • • • 1382</td>
+                          <td>25 Nov 2021</td>
+                          <td>Complete</td>
+                          <td style="color: rgb(219, 84, 42);">-$500</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Deposited to BANK OF SPAIN • • • • 1382</td>
+                          <td>25 Nov 2021</td>
+                          <td>Complete</td>
+                          <td style="color: rgb(20, 133, 100);">+$500</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>Deposited to BANK OF SPAIN • • • • 1382</td>
+                          <td>23 Nov 2021</td>
+                          <td>Complete</td>
+                          <td style="color: rgb(219, 84, 42);">-$500</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+               </div>
+              </div>
+              </div>
+            </div>
+         </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <!-- <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
+                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            </footer> -->
+            <footer class="footer text-center footer_text"> 2022 © All rights reserved. <a class="footer_link"
+                href="#">gogoGlobal</a>
+        </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+
+        {% extends 'affiliator/base.html' %}
+        {%  block content %}
+        {% load static %}
+
+        <div class="page-wrapper wrapper_page" style="min-height: 250px;">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+          <div class="container-fluid white_bg">
+             <div class="row">
+              <div class="col-lg-12">
+                <div class="application-detail-heading-area">
+                 <h2 class="noti_detail">Manage Business </h2>
+                </div>
+                <div class="table-data-search-box">
+                 <div class="search">
+                  <input type="text" class="searchTerm" placeholder="Search">
+                  <button type="submit" class="searchButton">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                 </div>  
+                </div>
+               <div class="manage-admins-main-area">
+                <div class="manage-admins-table-area">
+                  <table class="table cenetr">
+                    <thead>
+                      <tr>
+                        <th>S no</th>
+                        <th>Name</th>
+                        <th>User Name</th>
+                        <th>Phone No</th>
+                        <th>Paid Total Earnings</th>
+                        <th>Unpaid Total Earnings</th>
+                        <th>Unpaid Paid Referals</th>
+                        <th>Paid Total Referals </th>
+                        <th>Status </th>
+                        <th>View</th>
+
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>{{data.business_name}}</td>
+                        <td>{{data.business_email_id}}</td>
+                        <td>{{data.business_phoneno}}</td>
+                        <td>{{data.business_paidtotal_earning}}</td>
+                        <td>{{data.business_unpaidtotal_earning}}</td>
+                        <td>{{data.unpaid_paid_referals}}</td>
+                        <td>{{data.paid_total_referals}}</td>
+                        <td>True</td>
+                        <td>Tue</td>
+                        
+                       
+                       
+                       
+                      
+                       
+                      </tr>
+                      
+                
+                      </tr>
+                    </tbody>
+                  </table>     
+                </div>
+               </div> 
+              </div>
+            </div>
+         </div>
+          
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'vendor/base.html' %}
+{%  block content %}
+{% load static %}
+        <div class="page-wrapper white_bg" style="min-height: 250px;">
+
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid fluid_container pt-3">
+             <div class="row responsive_row">
+                <div class="application-detail-heading-area">
+                 <h2 class="noti_detail">Profile</h2> 
+                </div>
+              <div class="col-lg-5 lg_col">
+              <!--  <div class="application-detail-heading-area">
+                 <h2 class="info_personal">Personal Info</h2>
+               </div> -->
+               <!-- <div class="add-payment-heading-area">
+                <h2>Photo</h2> 
+               </div> -->
+               <div class="profile-detail-main-area main_area_profile_detail responsive_width">
+                <div class="user-photo-main-area">
+                 <div class="user-img-area">
+                  <img src="{% static 'vendor_css/images/ankur.JPEG' %}" alt="user img">   
+                 </div>
+           
+               </div>
+
+               <div class="user-detail-main-area">
+                <div class="row space_left">
+                 <div class="col-lg-6 col_lg_six">
+                  <div class="personal-information-heading">
+                   <h2>Full Name</h2> 
+                   <h2>Email ID</h2>
+                   <h2>Phone</h2>
+                   <h2>Gender</h2>
+                   <h2>City</h2>
+                  </div>  
+                 </div>
+                 <div class="col-lg-6 col_lg_six">
+                  <div class="personal-information-details">
+                   <p>Ankur</p> 
+                   <p>ankur@gmail.com</p>
+                   <p>9874563214</p>
+                   <p>Male</p>
+                   <p>Noida</p>
+                  </div>  
+                 </div>      
+                </div>
+               </div>
+               </div>
+              </div>
+              
+             </div>
+            </div>
+        </div>    
+
+{% endblock content %}        

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>gogoGlobal.LIFE</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'admin_css/images/favicon.png' %}">
+    <!-- Custom CSS -->
+   <link href="{% static 'admin_css/css/style.min.css' %}" rel="stylesheet">
+   <link href="{% static 'admin_css/css/responsive.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+         <div class="forget-password-detail-area responsive_height">
+          <div class="forget-password-left-area left_area">
+              <a href="./dashboard.html">
+                  <img src="{% static 'admin_css/images/logo.png' %}" alt="logo-img"> 
+              </a>
+          </div> 
+          <div class="forget-password-input-area middel-heading-main-area right_area_back-image">
+            <div class="forget-password-left-area">
+                <a href="/business-panel-dashboard.html">
+                    <img src="{% static 'admin_css/images/logopng.png' %}" alt="logo-img"> 
+                </a>
+            </div>
+            <form action="" class="right_area responsive_area" method="post">
+                {% csrf_token %}
+                <div class="login">
+                    <h2 class="change_position">Sign Up</h2> 
+                </div>
+                <p>Personal Details</p>
+                <div class="resgistration-input-box-area box_area">
+                    <input type="text" id="first_name" name="first_name" class="form-control input_area" placeholder="First_Name">
+                   </div>
+                   <div class="resgistration-input-box-area box_area">
+                    <input type="text" id="last_name" name="last_name" class="form-control input_area" placeholder="Last_Name">
+                   </div>
+                  
+                   <div class="resgistration-input-box-area box_area">
+                    <input type="text" id="email_id" name="email_id" class="form-control input_area" placeholder="Email ID">
+                   </div>
+                   <div class="resgistration-input-box-area box_area">
+                     <input type="number" id="phone_number" name="phone_number" class="form-control input_area" placeholder="phone_number">
+                    </div>
+ 
+                   <div class="resgistration-input-box-area box_area">
+                     <input type="text" id="password" name="password" class="form-control input_area" placeholder="Password">
+                   </div>
+                   <div class="resgistration-input-box-area box_area">
+                    <input type="tel" id="con_password" name="con_password" class="form-control input_area" placeholder="Confirm Password">
+                   </div>
+                  <div class="email-submit-btn-area btn_area">
+                   <button type="submit" class="email-submit-btn btn_submit">Submit</button>   
+                </div>
+                
+                <div class="signup_area">
+                    <p>Not a member?<a href="./login.html"> Sign up now</a></p>
+                </div>
+            </form>
+          </div> 
+         </div>   
+        <!-- ============================================================== -->
+        <!-- class="footer_link" End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="{% static 'admin_css/plugins/bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'admin_css/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'admin_css/js/app-style-switcher.js' %}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'admin_css/js/waves.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'admin_css/js/sidebarmenu.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'admin_css/js/custom.js' %}"></script>
+</body>
+
+</html>
